@@ -32,11 +32,11 @@
             
                 <button class="cn"><a href="Untitled-2222222.html">JOIN US</a></button>
 
-                <div class="form">
+                <div class="form" onsubmit="return validateForm">
                     <h2>Login Here</h2>
-                    <input type="email" name="email" placeholder="Enter Email Here">
-                    <input type="password" name="" placeholder="Enter Password Here">
-                    <button class="btnn"><a href="#">Login</a></button>
+                    <input type="email" name="email" id="email" placeholder="Enter Email Here" required>
+                    <input type="password" name="password" id="password" placeholder="Enter Password Here" required>
+                    <button class="btnn"><a href="#" >Login</a></button>
 
                     <p class="link">Don't have an account<br>
                     <a href="#">Sign up </a> here</a></p>
@@ -56,6 +56,23 @@
         </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js">
+
+        function validateForm(){
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+        }
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]/;
+        if(emailRegex.test(email)){
+            alert('Please enter a valid email');
+            return false;
+        }
+        
+        if(password.length<8){
+            alert('Passwprd must be at least 8 character');
+            return false;
+        }
+
 
 (function(doc){
   var scriptElm = doc.scripts[doc.scripts.length - 1];
