@@ -50,8 +50,9 @@
 }
 
 .srch {
-    padding: 5px;
+    padding: 7px;
     margin-right: 10px;
+    margin-top: 15px;
 }
 
 .btn {
@@ -75,8 +76,8 @@
     cursor: pointer;
 }
 
-.form {
-    max-width: 400px;
+form {
+    max-width: 250px;
     margin: 20px auto;
     padding: 20px;
     background-color: #1a1a1a;
@@ -112,10 +113,22 @@ input {
 
 .icons {
     display: flex;
+    
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    
     margin-top: 10px;
 }
 
 .icons a {
-    margin-right: 10px;
+    
+    
+    
     color: #ff6600;
+}
+.liw{
+    text-align: center;
 }
