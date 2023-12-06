@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #signUpForm {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Sign Up</h2>
+
+    <form id="signUpForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="button" onclick="validateSignUp()">Sign Up</button>
+    </form>
+
+    <script>
+        function validateSignUp() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var password = document.getElementById("password").value;
+
+            var isValid = true;
+            var errorMessage = "";
+
+         
+            var namePattern = /^[A-Z][a-zA-Z]{0,9}$/;
+            if (!namePattern.test(firstName)) {
+      
+      isValid = false;
+      
+  errorMessage += "First name should start with a capital letter and use up to 10 characters.\n";
+            }
+
+            
+    if (!namePattern.test(lastName)) {isValid = false;
+   errorMessage += "Last name should start with a capital letter and use up to 10 characters.\n";
+            }
+
+           var emailPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+            if (!emailPattern.test(email)) {
+         isValid = false;
+                errorMessage += "Enter a valid email address ending with '.com' and at least 10 characters long.\n";
+            }
+
+          
+            var phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phoneNumber)) {
+                isValid = false;
+                errorMessage += "Phone number should have exactly 10 digits.\n";
+            }
+
+     
+     if (isValid) {
+  alert("Sign up successful!\n\nDetails:\nName: " + firstName + " " + lastName + "\nEmail: " + email + "\nPhone Number: " + phoneNumber);
+            } else {
+                alert("Please fulfill the following conditions:\n\n" + errorMessage);
+            }
+        }
+    </script>
+
+</body>
+</html>
