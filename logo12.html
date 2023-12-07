@@ -14,11 +14,11 @@
 
             <div class="menu">
                 <ul>
-                    <li><a href="#" style="font-family:verdana">HOME</a></li>
+                    <li><a href="prototimp.html" style="font-family:verdana">HOME</a></li>
                     <li><a href="#" style="font-family:verdana">ABOUT</a></li>
                     <li><a href="#" style="font-family:verdana">SERVICE</a></li>
                     <li><a href="#" style="font-family:verdana">DESIGN</a></li>
-                    <li><a href="#" style="font-family:verdana">CONTACT</a></li>
+                    <li><a href="cuntect us.html" style="font-family:verdana">CONTACT</a></li>
                 </ul>
             </div>
 
@@ -26,31 +26,43 @@
                 <input class="srch" type="search" name="" placeholder="Type To text">
                 <a href="Untitled-2222222.html"><button class="btn">Search</button></a>
             </div>
+        <p></p>
 
         </div> 
         <div class="content">
             
             <button class="cn"><a href="Untitled-2222222.html">JOIN US</a></button>
             <form action="" onsubmit="return validateForm()">
-                <div class="form" >
-                    <h2>Login Here</h2>
-                    <input type="email" name="email" id="email" placeholder="Enter Email Here" required>
-                    <p class="error" id="emailError"></p>
-                    <input type="password" name="password" id="password" placeholder="Enter Password Here" required>
-                    <p class="error" id="passwordError"></p>
-                    <button class="btnn" type="submit">Login</button>
+                <form id="signUpForm" onclick="validateSignUp()">
+                    <h2>Sign in</h2>
+
+                    
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <p class="error-message" id="emailError"></p>
+
+                   
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <p class="error-message" id="passwordError"></p>
+
+                    <button class="button" type="button" onclick="validateSignUp()">Sign in</button>
 
                     <p class="link">Don't have an account<br>
-                    <a href="#">Sign up here</a></p>
-                    <p class="liw">Log in with</p>
-
-                    <div class="icons">
-                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
-                    </div>
+                        <a href="singhtn in.html">Sign up here</a></p>
+                        <p class="liw">Log in with</p>
+    
+                        <div class="icons">
+                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                        </div>
+    
+                    
+                    
 
                 </div>
             </form>
@@ -58,32 +70,38 @@
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script>
-        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+        function validateSignUp() {
+       
+        var email = document.getElementById("email").value;
+      
+        var password = document.getElementById("password").value;
 
-        function validateForm() {
-            let emailInput = document.getElementById('email');
-            let passwordInput = document.getElementById('password');
-            let emailError = document.getElementById('emailError');
-            let passwordError = document.getElementById('passwordError');
-            
-            emailError.innerText = '';
-            passwordError.innerText = '';
+        var isValid = true;
 
-            if (!emailRegex.test(emailInput.value)) {
-                emailError.innerText = 'Error: Invalid email format';
-                return false; // prevent form submission
-            }
-            if (!passwordRegex.test(passwordInput.value)) {
-                passwordError.innerText = 'Error: Password must be at least 8 characters long and include at least one lowercase letter, one uppercase letter, and one digit.';
-                return false; // prevent form submission
-            }
+        
 
-            // The form will only submit if both email and password are valid
-         return true;
+        var emailPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+        if (!emailPattern.test(email)) {
+            isValid = false;
+            document.getElementById("emailError").innerText = "Invalid email";
+        } else {
+            document.getElementById("emailError").innerText = "";
         }
 
-(function(doc){
+        
+        var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                isValid = false;
+                document.getElementById("passwordError").innerText = "Invalid password";
+            } else {
+                document.getElementById("passwordError").innerText = "";
+            }
+
+        if (isValid) {
+            alert("Sign up successful!\n\nDetails:\nName: " + firstName + " " + lastName + "\nEmail: " + email + "\nPhone Number: " + phoneNumber);
+        }
+    }
+    (function(doc){
   var scriptElm = doc.scripts[doc.scripts.length - 1];
   var warn = ['[ionicons] Deprecated script, please remove: ' + scriptElm.outerHTML];
 
@@ -112,8 +130,9 @@
   console.warn(warn.join('\n'));
 
 })(document);
-
-
     </script>
 </body>
 </html>
+
+
+
