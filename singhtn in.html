@@ -1,126 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        header {
-            background-color: #4CAF50;
-            padding: 20px;
+    <title>Webpage tasura </title>
+   <style>
+    .body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding:-100px;
+    color: white;
+}
+
+.icon {
+    flex: 1;
+}
+
+.logo {
+    margin: 0;
+    color: #ff6600; 
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.srch {
+    padding: 7px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.cn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    max-width: 250px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.5); /* Halloween orange shadow */
+    color: white;
+}
+
+form h2 {
+    margin-bottom: 20px;
+}
+
+.button{
+    background-color: #ff6600;
             color: white;
-            font-size: 24px;
-        }
-        #signUpForm {
-            max-width: 300px;
-            margin: 0 auto;
-        }
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .error {
-            color: #d9534f;
-            text-align: left;
+            border: none;
+            padding: 5px 20px;
+            cursor: pointer;
+
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: #333;
+    color: white;
+    border: 1px solid #ff6600;
+}
+
+.error-message {
+            color: #ff6600;
+            margin-top: -10px;
             margin-bottom: 10px;
-        }
-        
-        }
-        .cn {
+            font-size: 14px;
+}
+
+            .btn {
             background-color: #ff6600;
             color: white;
             border: none;
-            padding: 10px 20px;
-            text-decoration: none;
+            padding: 5px 10px;
             cursor: pointer;
+.link {
+    margin-top: 10px;
+}
+
+.icons {
+    display: flex;
+    
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    
+    margin-top: 10px;
+}
+
+.icons a {
+    
+    
+    
+    color: #ff6600;
+}
+.liw{
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
         }
-    </style>
+
+        .menu {
+            margin-top: 10px;
+        }
+
+        .search {
+            margin: 10px 0;
+        }
+    }
+
+   </style>
 </head>
 <body>
 
-    <header>
-        User Registration
-    </header>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">US TURUSISIM </h2>
+            </div>
 
-    <form id="signUpForm">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" required><br>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" style="font-family:verdana">HOME</a></li>
+                    <li><a href="#" style="font-family:verdana">ABOUT</a></li>
+                    <li><a href="#" style="font-family:verdana">SERVICE</a></li>
+                    <li><a href="#" style="font-family:verdana">DESIGN</a></li>
+                    <li><a href="#" style="font-family:verdana">CONTACT</a></li>
+                </ul>
+            </div>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" required><br>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="Untitled-2222222.html"><button class="btn">Search</button></a>
+            </div>
+        <p></p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter Email Here" required>
-        <p class="error" id="emailError"></p><br>
-
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number" required><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter Password Here" required>
-        <p class="error" id="passwordError"></p><br>
-
-        <button type="button" onclick="validateSignUp()">Sign Up</button>
-    </form>
-
-    
-
-    <script>
-        
-         function validateSignUp() {
-            var firstName = document.getElementById("firstName").value;
-            var lastName = document.getElementById("lastName").value;
-            var email = document.getElementById("email").value;
-            var phoneNumber = document.getElementById("phoneNumber").value;
-            var password = document.getElementById("password").value;
-
-            var isValid = true;
-            var errorMessage = "";
-
-         
-            var namePattern = /^[A-Z][a-zA-Z]{0,9}$/;
-            if (!namePattern.test(firstName)) {
-      
-      isValid = false;
-      
-  errorMessage += "First name should start with a capital letter and use up to 10 characters.\n";
-            }
-
+        </div> 
+        <div class="content">
             
-    if (!namePattern.test(lastName)) {isValid = false;
-   errorMessage += "Last name should start with a capital letter and use up to 10 characters.\n";
-            }
+            <button class="cn"><a href="Untitled-2222222.html">JOIN US</a></button>
+            <form action="" onsubmit="return validateForm()">
+                <form id="signUpForm" onclick="validateSignUp()">
+                    <h2>Sign up</h2>
 
-           var emailPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-            if (!emailPattern.test(email)) {
-         isValid = false;
-                errorMessage += "Enter a valid email address ending with '.com' and at least 10 characters long.\n";
-            }
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <p class="error-message" id="firstNameError"></p>
 
-          
-            var phonePattern = /^\d{10}$/;
-            if (!phonePattern.test(phoneNumber)) {
-                isValid = false;
-                errorMessage += "Phone number should have exactly 10 digits.\n";
-            }
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <p class="error-message" id="lastNameError"></p>
 
-     
-     if (isValid) {
-  alert("Sign up successful!\n\nDetails:\nName: " + firstName + " " + lastName + "\nEmail: " + email + "\nPhone Number: " + phoneNumber);
-            } else {
-                alert("Please fulfill the following conditions:\n\n" + errorMessage);
-            }
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <p class="error-message" id="emailError"></p>
+
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    <p class="error-message" id="phoneNumberError"></p>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <p class="error-message" id="passwordError"></p>
+
+                    <button class="button" type="button" onclick="validateSignUp()">Sign Up</button>
+
+                        <p class="link">Do u have an exist account<br>
+                            <a href="logo12.html">Log in here</a></p> 
+                    </form>
+                
+
+                   
+                    
+
+                </div>
+            </form>
+        </div>
+    </div>
+  
+    <script>
+        function validateSignUp() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var email = document.getElementById("email").value;
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var password = document.getElementById("password").value;
+
+        var isValid = true;
+
+        var namePattern = /^[A-Z][a-zA-Z]{0,9}$/;
+        if (!namePattern.test(firstName)) {
+            isValid = false;
+            document.getElementById("firstNameError").innerText = "Invalid first name";
+        } else {
+            document.getElementById("firstNameError").innerText = "";
         }
-    </script>
 
+        if (!namePattern.test(lastName)) {
+            isValid = false;
+            document.getElementById("lastNameError").innerText = "Invalid last name";
+        } else {
+            document.getElementById("lastNameError").innerText = "";
+        }
+
+        var emailPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+        if (!emailPattern.test(email)) {
+            isValid = false;
+            document.getElementById("emailError").innerText = "Invalid email";
+        } else {
+            document.getElementById("emailError").innerText = "";
+        }
+
+        var phonePattern = /^\d{10}$/;
+        if (!phonePattern.test(phoneNumber)) {
+            isValid = false;
+            document.getElementById("phoneNumberError").innerText = "Invalid phone number";
+        } else {
+            document.getElementById("phoneNumberError").innerText = "";
+        }
+        var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                isValid = false;
+                document.getElementById("passwordError").innerText = "Invalid password";
+            } else {
+                document.getElementById("passwordError").innerText = "";
+            }
+
+        if (isValid) {
+            alert("Sign up successful!\n\nDetails:\nName: " + firstName + " " + lastName + "\nEmail: " + email + "\nPhone Number: " + phoneNumber);
+        }
+    }
+    </script>
 </body>
 </html>
