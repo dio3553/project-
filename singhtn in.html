@@ -1,44 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        #signUpForm {
-            max-width: 300px;
-            margin: 0 auto;
-        }
-    </style>
+    <title>Webpage tasura </title>
+   <style>
+    .body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+.icon {
+    flex: 1;
+}
+
+.logo {
+    margin: 0;
+    color: #ff6600; /* Halloween orange */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.srch {
+    padding: 7px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.cn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    max-width: 250px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.5); /* Halloween orange shadow */
+    color: white;
+}
+
+form h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: #333;
+    color: white;
+    border: 1px solid #ff6600;
+}
+
+.btnn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.link {
+    margin-top: 10px;
+}
+
+.icons {
+    display: flex;
+    
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    
+    margin-top: 10px;
+}
+
+.icons a {
+    
+    
+    
+    color: #ff6600;
+}
+.liw{
+    text-align: center;
+}
+
+   </style>
 </head>
 <body>
 
-    <h2>Sign Up</h2>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">US TURUSISIM </h2>
+            </div>
 
-    <form id="signUpForm">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required><br>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" style="font-family:verdana">HOME</a></li>
+                    <li><a href="#" style="font-family:verdana">ABOUT</a></li>
+                    <li><a href="#" style="font-family:verdana">SERVICE</a></li>
+                    <li><a href="#" style="font-family:verdana">DESIGN</a></li>
+                    <li><a href="#" style="font-family:verdana">CONTACT</a></li>
+                </ul>
+            </div>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required><br>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="Untitled-2222222.html"><button class="btn">Search</button></a>
+            </div>
+        <p></p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+        </div> 
+        <div class="content">
+            
+            <button class="cn"><a href="Untitled-2222222.html">JOIN US</a></button>
+            <form action="" onsubmit="return validateForm()">
+                <div class="form" >
+                    
+                    <form id="signUpForm" onclick="validateSignUp()">
+                        <h2>Sign up</h2>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required><br>
+                
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required><br>
+                
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br>
+                
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+                
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required><br>
 
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+                        <button type="button" onclick="validateSignUp()">Sign Up</button>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
+                        <p class="link">Do u have an exist account<br>
+                            <a href="#">Log in here</a></p>
+                            <p class="liw">Log in with</p>
+                
+                        
 
-        <button type="button" onclick="validateSignUp()">Sign Up</button>
-    </form>
+                        <div class="icons">
+                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                        </div>
+                    </form>
+                
 
+                   
+                    
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script>
         function validateSignUp() {
             var firstName = document.getElementById("firstName").value;
@@ -84,7 +259,38 @@
                 alert("Please fulfill the following conditions:\n\n" + errorMessage);
             }
         }
-    </script>
+   
+(function(doc){
+  var scriptElm = doc.scripts[doc.scripts.length - 1];
+  var warn = ['[ionicons] Deprecated script, please remove: ' + scriptElm.outerHTML];
 
+  warn.push('To improve performance it is recommended to set the differential scripts in the head as follows:')
+
+  var parts = scriptElm.src.split('/');
+  parts.pop();
+  parts.push('ionicons');
+  var url = parts.join('/');
+
+  var scriptElm = doc.createElement('script');
+  scriptElm.setAttribute('type', 'module');
+  scriptElm.src = url + '/ionicons.esm.js';
+  warn.push(scriptElm.outerHTML);
+  scriptElm.setAttribute('data-stencil-namespace', 'ionicons');
+  doc.head.appendChild(scriptElm);
+
+  
+  scriptElm = doc.createElement('script');
+  scriptElm.setAttribute('nomodule', '');
+  scriptElm.src = url + '/ionicons.js';
+  warn.push(scriptElm.outerHTML);
+  scriptElm.setAttribute('data-stencil-namespace', 'ionicons');
+  doc.head.appendChild(scriptElm)
+  
+  console.warn(warn.join('\n'));
+
+})(document);
+
+
+    </script>
 </body>
 </html>
