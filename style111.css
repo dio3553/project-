@@ -19,7 +19,12 @@
     padding: 10px;
     color: white;
 }
-
+.error-message {
+    color: #ff6600;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 .icon {
     flex: 1;
 }
@@ -131,4 +136,27 @@ input {
 }
 .liw{
     text-align: center;
+}
+
+.button{
+    background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 5px 20px;
+            cursor: pointer;
+
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        margin-top: 10px;
+    }
+
+    .search {
+        margin: 10px 0;
+    }
 }
