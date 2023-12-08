@@ -4,185 +4,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Websitectin - e</title>
+    <title>Websitectin - Contact</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        /* Reset and General Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-   *{
-    box-sizing: border-box;
-    margin: 0;
-}
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: lightblue;
+        }
 
-body, html {
-    margin: 0;
-    padding: 0;
-}
+        /* Scroll Bar Styles */
+        ::-webkit-scrollbar {
+            width: 20px;
+        }
 
-/*------------------------Scroll Bar-----------------------*/
-::-webkit-scrollbar {
-    width: 20px;
-}
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
 
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-.logo {
-    flex: 1;
-    font-size: 40px;
-    padding: 20px;
-    margin-left: 50px;
-    font-family: Satisfy;
-}
+        ::-webkit-scrollbar-thumb {
+            background-color: #5c9ce5;
+            border-radius: 10px;
+        }
 
-::-webkit-scrollbar-thumb {
-    background-color: #fde65e;
-    border-radius: 10px;
-}
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgb(73, 173, 206);
+        }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: #FDE02F;
-}
+        /* Navigation Bar Styles */
+        .nav-bar {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            height: 90px;
+            background-color: #fff;
+            box-shadow: 3px 3px 10px lightslategray;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
 
-/*========================Nav Bar=========================*/
-.nav-bar {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 90px;
-    background-color: #fff;
-    box-shadow: 3px 3px 10px lightslategray;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
+        .logo {
+            flex: 1;
+            font-size: 40px;
+            padding: 20px;
+            margin-left: 50px;
+            font-family: 'Satisfy', cursive;
+        }
 
-.logo {
-    flex: 1;
-    font-size: 40px;
-    padding: 20px;
-    margin-left: 50px;
-    font-family: Satisfy;
-}
+        .menu {
+            flex: 1;
+            display: flex;
+            flex-flow: row wrap;
+        }
 
-ul.menu {
-    flex: 1;
-    display: flex;
-    flex-flow: row wrap;
-}
+        .menu-item {
+            flex: 1;
+            list-style-type: none;
+            font-size: 16px;
+            font-family: 'Barlow Condensed', sans-serif;
+            text-align: center;
+        }
 
-.menu li {
-    flex: 1;
-    list-style-type: none;
-    font-size: 16px;
-    font-family: "Barlow Condensed";
-    text-align: center;
-}
+        .menu-item a {
+            text-decoration: none;
+            color: #000;
+            text-transform: uppercase;
+            display: block;
+            padding: 10px;
+        }
 
-.menu li a {
-    text-decoration: none;
-    color: #000;
-    text-transform: uppercase;
-}
+        .menu-item a:hover {
+            color: midnightblue;
+            text-decoration: underline;
+        }
 
-.menu li a:hover {
-    color: midnightblue;
-    text-decoration: underline;
-}
+        /* Form Styles */
+        .form {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            width: 70%;
+            padding: 1% 2%;
+            margin: 20px auto; /* Center the form horizontally */
+        }
 
-/*=============================Banner=============================*/
-.banner {
-    background-image: url("https://res.cloudinary.com/dxssqb6l8/image/upload/v1605294054/young-woman-enjoying-beautiful-scenery-of-lago-di-braies-italy-picjumbo-com_aa0fvw.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /*overflow: hidden;*/
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .form input,
+        .form .date,
+        .form .book {
+            padding: 15px;
+            margin-right: 10px;
+            font-size: 18px;
+            font-family: 'Roboto', Arial, sans-serif;
+            border-radius: 5px;
+            outline: 0;
+            border: none;
+            flex: 1; /* Equal width for input, date, and book */
+        }
 
-.banner::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    /*background-size: 100%;*/
-}
+        .form input {
+            width: 100%; /* Full width for input */
+            margin-bottom: 10px;
+        }
 
-.banner-text-item {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner-heading {
-    flex: 1;
-}
-
-.banner-heading h1 {
-    font-size: 100px;
-    font-weight: normal;
-    color: #FDE02F;
-    font-family: Satisfy;
-}
-
-.banner-text-item .form {
-    flex: 1;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    width: 70%;
-    padding: 1% 2%;
-}
-.banner-text-item input,
-.banner-text-item .date,
-.banner-text-item .book {
-    padding: 15px;
-    margin-right: 10px;
-    font-size: 18px;
-    font-family: Roboto;
-    border-radius: 5px;
-    outline: 0;
-    border: none;
-
-}
-
-.banner-text-item input {
-    width: 50%;
-    flex: 2;
-}
-
-.banner-text-item .date {
-    width: 20%;
-    flex: 1;
-}
-
-.banner-text-item .book {
-    width: 20%;
-    flex: 1;
-}
-
-        
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            color: #777;
+        }
     </style>
 </head>
 
@@ -190,45 +139,49 @@ ul.menu {
     <section class="nav-bar">
         <div class="logo">Go Trip</div>
         <ul class="menu">
-            <li><a href="prototimp.html">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">service</a></li>
-            <li><a href="cuntect us.html">contact</a></li>
-            
+            <li class="menu-item"><a href="prototimp.html">home</a></li>
+            <li class="menu-item"><a href="#">about</a></li>
+            <li class="menu-item"><a href="#">service</a></li>
+            <li class="menu-item"><a href="cuntect%20us.html">contact</a></li>
         </ul>
-        </div>
-        <link rel="stylesheet" href="thyUntitled-2.css">
     </section>
 
-    <header>
-        <h1>Websitectin</h1>
-        <p>Your Partner in Building a Strong Web Presence</p>
-    </header>
+    <section><br>
+        <header>
+            <h1>Contact Go Trip</h1>br
+            <p>Get in touch with us for all your travel needs!</p>
+        </header><br>
+
+        <section>
+            <h2>Contact Details:</h2><br>
+            <address>
+                <strong>Go Trip Headquarters</strong><br>
+                123 Travel Street<br>
+                Adventure City, AT 54321<br>
+                <abbr title="Phone">Phone:</abbr> +1 (123) 456-7890
+            </address>
+
+            <p>Email: <a href="mailto:info@gotrip.com">info@gotrip.com</a></p>
+        </section><br>
+
+        
+    </section>
 
     <section>
-        
-        <h2>Services</h2>
-        <ul>
-            <li>Responsive Website Design</li>
-            <li>Custom Web Development</li>
-            <li>E-commerce Solutions</li>
-            <li>SEO Optimization</li>
-            <li>Web Hosting</li>
-        </ul>
-
-        <h2>Our Mission</h2>
+        <h2>Our Mission</h2><br>
         <p>At Websitectin, our mission is to help our clients thrive in the digital world. We believe in delivering high-quality web solutions that meet the unique needs of each client, ensuring their online success.</p>
+    </section>
 
-        <h2>Contact Us</h2>
+    <section><br>
+        <h2>Contact Us</h2> <br>
         <p>If you have any questions or inquiries, feel free to reach out to us. We are here to assist you on your journey to a strong and impactful web presence.</p>
         <p>Email: info@websitectin.com</p>
         <p>Phone: +1 (123) 456-7890</p>
-    </section>
+    </section><br>
 
     <footer>
-        &copy; 2023 Websitectin | Designed by dipni
+       &copy; 2023 Website | Go trip 
     </footer>
-
 </body>
 
 </html>
