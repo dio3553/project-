@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-          *{
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
     box-sizing: border-box;
     margin: 0;
 }
@@ -82,110 +86,139 @@ ul.menu {
     text-decoration: underline;
 }
 
-/*=============================Banner=============================*/
-.banner {
-    background-image: url("https://res.cloudinary.com/dxssqb6l8/image/upload/v1605294054/young-woman-enjoying-beautiful-scenery-of-lago-di-braies-italy-picjumbo-com_aa0fvw.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /*overflow: hidden;*/
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .alaska-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
 
-.banner::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    /*background-size: 100%;*/
-}
+        .alaska-text {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 20px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
 
-.banner-text-item {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}
+        .why-visit {
+            font-family: 'Satisfy', cursive;
+            font-size: 30px;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
 
-.banner-heading {
-    flex: 1;
-}
+        /* Style for the image slider container */
+        .slider-container {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Center the slider horizontally */
+        }
 
-.banner-heading h1 {
-    font-size: 100px;
-    font-weight: normal;
-    color: #FDE02F;
-    font-family: Satisfy;
-}
+        /* Style for the image slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
 
-.banner-text-item .form {
-    flex: 1;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    width: 70%;
-    padding: 1% 2%;
-}
-.banner-text-item input,
-.banner-text-item .date,
-.banner-text-item .book {
-    padding: 15px;
-    margin-right: 10px;
-    font-size: 18px;
-    font-family: Roboto;
-    border-radius: 5px;
-    outline: 0;
-    border: none;
+        .slider img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
 
-}
-
-.banner-text-item input {
-    width: 50%;
-    flex: 2;
-}
-
-.banner-text-item .date {
-    width: 20%;
-    flex: 1;
-}
-
-.banner-text-item .book {
-    width: 20%;
-    flex: 1;
-}
-
-      
+        /* Style for the slider navigation buttons */
+        .slider-btn {
+            cursor: pointer;
+            font-size: 24px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #3498db;
+        }
     </style>
 </head>
 <body>
     <section class="nav-bar">
-        <div class="logo">Go Trip</div>
-        <ul class="menu">
-            <li><a href="prototimp.html">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">service</a></li>
-            <li><a href="cuntect us.html">contact</a></li>
-            
-        </ul>
-        </div>
-        <link rel="stylesheet" href="thyUntitled-2.css">
+        <section class="nav-bar">
+            <div class="logo">Go Trip</div>
+            <ul class="menu">
+                <li><a href="prototimp.html">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">service</a></li>
+                <li><a href="cuntect us.html">contact</a></li>
+            </ul>
+            </div>
+            <link rel="stylesheet" href="thyUntitled-2.css">
+        </section>
     </section>
-    <img src="c:\Users\User\Desktop\akaskkaaa.jpg" alt="alaska">
+    
+    <section class="alaska-section">
+        <div class="why-visit">Discover the Wonders of Alaska</div>
+        <p class="alaska-text">
+            Alaska, the Last Frontier, is a land of breathtaking landscapes and unique experiences. From towering mountains to vast glaciers, and from pristine wilderness to abundant wildlife, Alaska offers a once-in-a-lifetime adventure for every traveler.
+        </p>
+        <!-- Image Slider -->
+        <div class="slider-container">
+            <div class="slider">
+                <img src="akaskkaaa2.jpg" alt="Alaska 1">
+                <img src="akaskkaaa1.jpg" alt="Alaska 2">
+                <img src="akaskkaaa.jpg" alt="Alaska 3">
+                <img src="akaskkaaa3.jpg" alt="Alaska 4">
+                <img src="akaskkaaa4.jpg" alt="Alaska 5">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+        <!-- Slider Navigation Buttons -->
+        <button class="slider-btn" onclick="prevSlide()">&#10094;</button>
+        <button class="slider-btn" onclick="nextSlide()">&#10095;</button>
+        <!-- End of Image Slider -->
+        <div class="why-visit">Why Visit Alaska?</div>
+        <!-- Your existing text remains unchanged -->
+    
+    <p class="alaska-text">
+        1. Majestic Landscapes: Experience the grandeur of vast landscapes, towering mountains, and pristine wilderness.
+    </p>
+    <p class="alaska-text">
+        2. Unique Wildlife: Encounter diverse wildlife, including bears, moose, whales, and eagles, in their natural habitats.
+    </p>
+    <p class="alaska-text">
+        3. Outdoor Adventures: Enjoy a wide range of outdoor activities, from hiking and kayaking to fishing and dog sledding.
+    </p>
+    <p class="alaska-text">
+        4. Cultural Richness: Discover the rich Native Alaskan cultures and traditions that add depth to your journey.
+    </p>
+    <p class="alaska-text">
+        Plan your visit to Alaska and embark on a memorable journey filled with awe-inspiring scenery and unforgettable experiences.
+    </p>
+</section>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slider img');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            const translateValue = -currentSlide * 100 + '%';
+            slider.style.transform = `translateX(${translateValue})`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
 </body>
 </html>
