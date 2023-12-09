@@ -5,47 +5,92 @@
     margin: 0;
     padding: 0;
 }
+     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-.body {
-    font-family: 'Montserrat', sans-serif;
-    background: #f5f5f5;
-    background color:#FFA500
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+}
 
+/*------------------------Scroll Bar-----------------------*/
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fde65e;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #FDE02F;
+}
+
+/*========================Nav Bar=========================*/
 .nav-bar {
-    background: #333;
-    color: #fff;
-    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px lightslategray;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    flex: 1;
+    font-size: 40px;
+    padding: 20px;
+    margin-left: 50px;
+    font-family: Satisfy;
+}
+
+ul.menu {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.menu li {
+    flex: 1;
+    list-style-type: none;
+    font-size: 16px;
+    font-family: "Barlow Condensed";
     text-align: center;
 }
 
-.nav-bar .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-bar .menu {
-    list-style: none;
-}
-
-.nav-bar .menu li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.nav-bar .menu a {
+.menu li a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
 }
 
-/* Carousel styles */
+.menu li a:hover {
+    color: midnightblue;
+    text-decoration: underline;
+}
+/
 #myCarousel {
     margin-top: 20px;
 }
 
-/* Container styles */
+
 .container {
     background: #fff;
     padding: 20px;
@@ -83,26 +128,25 @@ footer {
     }
 }
 
-.container{color: #FFD700;}
 
-.myCarousel{color: #FFD700;}
+
 </style>
 
 <head>
 
 
-    <section class="nav-bar">
-        <div class="logo">Go Trip</div>
-        <ul class="menu">
-            <li><a href="logo12.html">home</a></li>
-            <li><a href="prototimp.html">tours</a></li>
-            <li><a href="#">package</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">contact us</a></li>
-        </ul>
-        </div>
-       
+    < <section class="nav-bar">
+        <section class="nav-bar">
+            <div class="logo">Go Trip</div>
+            <ul class="menu">
+                <li><a href="prototimp.html">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">service</a></li>
+                <li><a href="cuntect us.html">contact</a></li>
+            </ul>
+            </div>
+            <link rel="stylesheet" href="thyUntitled-2.css">
+        </section>
     </section>
 
     <title>ORLANDO HOTEL  | CALIFORIIAN </title>
