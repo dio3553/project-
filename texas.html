@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------Scroll Bar-----------------------*/
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fde65e;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #FDE02F;
+}
+
+/*========================Nav Bar=========================*/
+.nav-bar {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px lightslategray;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    flex: 1;
+    font-size: 40px;
+    padding: 20px;
+    margin-left: 50px;
+    font-family: Satisfy;
+}
+
+ul.menu {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.menu li {
+    flex: 1;
+    list-style-type: none;
+    font-size: 16px;
+    font-family: "Barlow Condensed";
+    text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.menu li a:hover {
+    color: midnightblue;
+    text-decoration: underline;
+}
+
+        .texas-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+
+        .texas-text {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 20px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .why-visit {
+            font-family: 'Satisfy', cursive;
+            font-size: 30px;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the image slider container */
+        .slider-container {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Center the slider horizontally */
+        }
+
+        /* Style for the image slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Style for the slider navigation buttons */
+        .slider-btn {
+            cursor: pointer;
+            font-size: 24px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #3498db;
+        }
+        .slider img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+    </style>
+</head>
+<body>
+    <section class="nav-bar">
+        <section class="nav-bar">
+            <div class="logo">Go Trip</div>
+            <ul class="menu">
+                <li><a href="prototimp.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="service.html">service</a></li>
+                <li><a href="cuntect us.html">contact</a></li>
+            </ul>
+            </div>
+            <link rel="stylesheet" href="thyUntitled-2.css">
+        </section>
+    </section>
+    
+    
+    <section class="texas-section">
+        <div class="why-visit">Explore the Beauty of Texas</div>
+        <p class="texas-text">
+            Texas, the Lone Star State, beckons with its diverse landscapes, vibrant cities, and rich cultural heritage. From the bustling urban life to the serene natural wonders, Texas offers a unique blend of experiences for every traveler.
+        </p>
+       
+        <div class="slider-container">
+            <div class="slider">
+                <img src="https://s.hdnux.com/photos/01/15/60/22/20382860/4/rawImage.jpg" alt="Texas 1">
+                <img src="https://www.travelandleisure.com/thmb/aBN3fZy9t_DxsLHT7nbsjif9bxg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-guadalupe-mountains-national-park-texas-VISITTXLOCLS0323-ba86eb87f7494fcea3c553939a3a39be.jpg" alt="Texas 2">
+                <img src="https://static.independent.co.uk/2023/06/23/16/iStock-1483998656.jpg" alt="Texas 3">
+                <img src="https://llandscapes-10674.kxcdn.com/wp-content/uploads/2016/07/palo-duro.jpg" alt="Texas 4">
+                <img src="https://www.forbes.com/advisor/wp-content/uploads/2022/09/best_places_to_live_in_texas.jpeg.jpg" alt="Texas 5">
+               
+            </div>
+        </div>
+    
+        <button class="slider-btn" onclick="prevSlide()">&#10094;</button>
+        <button class="slider-btn" onclick="nextSlide()">&#10095;</button>
+       
+        <div class="why-visit">Why Visit Texas?</div>
+        <p class="texas-text">
+            1. Cultural Diversity: Immerse yourself in the rich cultural tapestry of Texas, where history and modernity coexist seamlessly.
+        </p>
+        <p class="texas-text">
+            2. Natural Wonders: Explore the diverse landscapes, from the Gulf Coast beaches to the rugged beauty of Big Bend National Park.
+        </p>
+        <p class="texas-text">
+            3. Culinary Delights: Indulge in a gastronomic journey with Texan cuisine, known for its barbecue, Tex-Mex, and diverse flavors.
+        </p>
+        <p class="texas-text">
+            4. Lively Cities: Experience the energy of vibrant cities like Austin, Houston, and Dallas, each offering its own unique charm.
+        </p>
+        <p class="texas-text">
+            Plan your visit to Texas and discover the warmth, hospitality, and endless adventures that await you in the heart of the Lone Star State.
+        </p>
+    </section>
+</section>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slider img');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            const translateValue = -currentSlide * 100 + '%';
+            slider.style.transform = `translateX(${translateValue})`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+</body>
+</html>
