@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>/
-.body, h1, h2, h3, p, ul {
-    margin: 0;
-    padding: 0;
-}
-     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
@@ -19,7 +19,7 @@ body, html {
     padding: 0;
 }
 
-/*------------------------Scroll Bar-----------------------*/
+
 ::-webkit-scrollbar {
     width: 20px;
 }
@@ -85,190 +85,155 @@ ul.menu {
     color: midnightblue;
     text-decoration: underline;
 }
-/
-#myCarousel {
-    margin-top: 20px;
-}
 
+        .Cal-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
 
-.container {
-    background: #fff;
+        .Cal-text {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 20px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .why-visit {
+            font-family: 'Satisfy', cursive;
+            font-size: 30px;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        
+        .slider-container {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Center the slider horizontally */
+        }
+
+      
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .slider-btn {
+            cursor: pointer;
+            font-size: 24px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #3498db;
+        }
+        footer {
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-
-footer {
-    padding: 20px;
-    color: #fff;
+    color: ##00FFFF;
     text-align: center;
 }
 
-/
-#rating {
-    color: #FFD700; 
+        
+        .slider img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 8px;
 }
-
-.checked {
-    color: #FFD700;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .nav-bar .menu {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .nav-bar .menu li {
-        display: block;
-        margin-bottom: 10px;
-    }
-}
-
-
-
-</style>
-
-<head>
-
-
-    < <section class="nav-bar">
+    </style>
+</head>
+<body>
+    <section class="nav-bar">
         <section class="nav-bar">
             <div class="logo">Go Trip</div>
             <ul class="menu">
                 <li><a href="prototimp.html">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">service</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="service.html">service</a></li>
                 <li><a href="cuntect us.html">contact</a></li>
             </ul>
             </div>
             <link rel="stylesheet" href="thyUntitled-2.css">
         </section>
     </section>
-
-    <title>ORLANDO HOTEL  | CALIFORIIAN </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Prasang Singhal, Paras Patidar, Vijay Deshwal">
-    <meta name="keywords" content="voyager, voyager.com, online tickets booking, flight tickets, bus tickets, train tickets">
-    <link rel="icon" href="images/Logos/logo.ico" type="image">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Raleway:500" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    
-</head>
-
-<body background="Images\back.PNG">
-
-    <nav style="background: #FFA500; margin-bottom: 40px;">
-        <div class="nav-wrapper">
-            <a href="prototimp.html" class="brand-logo black-text" style="margin-left: 5vh; font-family: Montserrat; font-size: 35px;">VOYAGER</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.html" class="black-text" style="font-family: Montserrat; outline: none; font-size: 20px">Home</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col s7">
-
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                        <li data-target="#myCarousel" data-slide-to="4"></li>
-                        <li data-target="#myCarousel" data-slide-to="5"></li>
-                        <li data-target="#myCarousel" data-slide-to="6"></li>
-                    </ol>
-
-                
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="https://goo.gl/WFocJV">
-                        </div>
-                        <div class="item">
-                            <img src="https://goo.gl/Nr4aMU">
-                        </div>
-                        <div class="item">
-                            <img src="https://goo.gl/PNpnTw">
-                        </div>
-                        <div class="item">
-                            <img src="https://goo.gl/XdRCgU">
-                        </div>
-                        <div class="item">
-                            <img src="https://goo.gl/KzduWm">
-                        </div>
-                        <div class="item">
-                            <img src="https://goo.gl/LWYtMZ">
-                        </div>
-                        <div class="item">
-                            <img src="https://goo.gl/gxYv9X">
-                        </div>
-                    </div>
-
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left"></span>
-                      <span class="sr-only">Previous</span> 
-                    </a>
-
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right"></span>
-                      <span class="sr-only">Next</span> 
-                    </a>
-                </div>
-            </div>
-
-            <div class="col s5">
-
-                <h5>CAL</h5>
-                <h6>DISTRICT i</h6> <br>
-                <div id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-                <br>
-                <img src=https://ebaldc.org/property/california-hotel    title="Restaurant">
-                <img src="images_editorialnews-580x481.jpeg" title="No Smoking">
-                <img src="https://png.icons8.com/material/30/000000/news.png" title="Newspaper">
-                <img src="https://png.icons8.com/ios/30/000000/phone-not-being-used-filled.png" title="Adapted Telephones">
-                <img src="https://png.icons8.com/material/30/000000/tv.png" title="Color TV">
-                <img src="https://png.icons8.com/metro/30/000000/winter.png" title="Air Conditoning">
-                <img src="https://png.icons8.com/android/30/000000/tea.png" title="Coffess/Tea Maker">
-                <img src="https://png.icons8.com/ios/30/000000/business-filled.png" title="Desk">
-                <img src="https://png.icons8.com/ios/30/000000/bar-filled.png" title="Mini Bar">
-                <img src="https://png.icons8.com/material/30/000000/accessibility1.png" title="Handicapped Facilities">
-                <img src="https://png.icons8.com/ios/30/000000/valet-parking-filled.png" title="Valet Parking">
-                <img src="https://png.icons8.com/metro/30/000000/wifi.png" title="Wireless Connect (in room)">
-                <img src="https://png.icons8.com/ios/30/000000/bus-filled.png" title="Airport Shuttle">
-                <img src="https://png.icons8.com/ios/30/000000/dumbbell-filled.png" title="Fitness Centre">
-
+    <section class="Cal-section">
+        <div class="why-visit"> The GREATNESS  of CALIFORNIN</div>
+        <p class="Cal-text">
+          California is known as a celebrity hotspot. The state is home to some of the biggest names in Hollywood such as Johnny Depp, Halle Berry, George Clooney and Jennifer Anniston, and many visitors flock to the destination every year to possibly get a glimpse of them. You can even walk along the famous Walk of Fame and live out your movie-star dreams.
+        </p>
+       
+        <div class="slider-container">
+            <div class="slider">
+                <img src="https://static.independent.co.uk/2023/06/23/15/iStock-468040530.jpg" alt="CALIFORNIN 1">
+                <img src="https://www.thoughtco.com/thmb/tfjtL8rhGxHCuCkwNFRbUOczKio=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-869041446-5c8b237746e0fb000146acda.jpg" alt="CALIFORNIN2">
+                <img src="https://www.telegraph.co.uk/content/dam/eip/california/Huntington-City-Beach.jpg?imwidth=680" alt="CALIFORNIN 3">
+                <img src="https://www.ocregister.com/wp-content/uploads/2021/06/OCR-L-APPORTIONMENT-0427-01.jpg?w=525" alt="CALIFORNIN 4">
+                <img src="https://www.travelandleisure.com/thmb/y2hDePatmkv5NiC7HqwKCvjcT_s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/1-3efc238803174705b2c90e67c74024c7.jpg" alt="CALIFORNIN 5">
                
             </div>
         </div>
-    </div>
-
-   
-
+       
+        <button class="slider-btn" onclick="prevSlide()">&#10094;</button>
+        <button class="slider-btn" onclick="nextSlide()">&#10095;</button>
+ 
+        <div class="why-visit">Why Visit CALIFORNIN ?</div>
 
     
-    <footer class="section teal darken-3">
-        <p class="flow-text white-text center middle-align" style="font-family: Montserrat; font-size: 35px;">VOYAGER &copy; 2018</p>
+    <p class="Cal-text">
+        1.America is famous for it’s fantastic array of theme parks, and California is no stranger to this reputation. Home to theme parks such as Universal Studios Hollywood, Magic Mountain, Disneyland and Boomerang Bay – California is a great destination for the movie lovers and thrill seekers in your life.
+    </p>
+    <p class="Cal-text">
+       2. Known as the Golden State, the weather in California is pleasant year-round. Whilst of course you will experience some showers and cool weather at points (as with everywhere), you can be assured that during your Californian adventure, the weather will be enjoyable..
+    </p>
+    <p class="Cal-text">
+       3. We couldn’t write about California without mentioning the state’s gorgeous, golden beaches. Visit the famous Venice Beach and experience the Californian locals, beautiful coast line and fantastic attractions.
+    </p>
+    <p class="Cal-text">
+     4.  California is home to the Hollywood Hills – a bucket list destination for many. Aside from getting your obligatory tourist photo in front of the giant white sign, California is home to some of America’s most famous filming locations.
+    </p>
+    
+</section>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slider img');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            const translateValue = -currentSlide * 100 + '%';
+            slider.style.transform = `translateX(${translateValue})`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+    <footer style="background-color:powderblue;" class="section teal darken-3">
+        <p class="flow-text white-text center middle-align" style="font-family: Montserrat; font-size: 35px;">Go Trip &copy; 2018</p>
         
-        <div class="icons">
+        <div class="icons"  style="background-color:powderblue;">
                        
                        
      <a href=" https://www.facebook.com/"><ion-icon name="logo-facebook"> </ion-icon = >Facebooked </a>
@@ -277,11 +242,6 @@ footer {
   <a href="https://mail.google.com/mail/u/0/#inbox"><ion-icon name="logo-google">Gmail </ion-icon></a>
                         
                     </div>
-        
-        
-        
-    </footer>
-
     
-
+</body>
 </html>
