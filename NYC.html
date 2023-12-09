@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------Scroll Bar-----------------------*/
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fde65e;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #FDE02F;
+}
+
+
+.nav-bar {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px lightslategray;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    flex: 1;
+    font-size: 40px;
+    padding: 20px;
+    margin-left: 50px;
+    font-family: Satisfy;
+}
+
+ul.menu {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.menu li {
+    flex: 1;
+    list-style-type: none;
+    font-size: 16px;
+    font-family: "Barlow Condensed";
+    text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.menu li a:hover {
+    color: midnightblue;
+    text-decoration: underline;
+}
+
+        .NYC-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+
+        .NYC-text {
+              font-family:Times New Roman, monospace;
+            font-size: 20px;
+            color: #333;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .why-visit {
+            font-family: 'Satisfy', cursive;
+            font-size: 30px;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+    
+        .slider-container {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; 
+        }
+
+       
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+   
+        .slider-btn {
+            cursor: pointer;
+            font-size: 24px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <section class="nav-bar">
+        <section class="nav-bar">
+            <div class="logo">Go Trip</div>
+            <ul class="menu">
+                <li><a href="prototimp.html">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">service</a></li>
+                <li><a href="cuntect us.html">contact</a></li>
+            </ul>
+            </div>
+            <link rel="stylesheet" href="thyUntitled-2.css">
+        </section>
+    </section>
+    
+    <section class="NYC-section">
+        <div class="why-visit">ONE OF THE BEST STATES</div>
+        <p class="NYC-text">
+            New York is a place that many people want to visit once in their lives. This town with its impressive buildings, famous landmarks and unique energy he has. It is a place where anyone who visits it can never forget.
+        </p>
+     
+        <div class="slider-container">
+            <div class="slider">
+                <img src="NYC.5.jpg" alt="NYC1">
+                <img src="NYC.4.jpg" alt="NYC3">
+                <img src="NYC.3.jpg" alt="NYC2">
+                <img src="NYC.2.jpg" alt="NYC4">
+                <img src="NYC.1.jpg" alt="NYC1">
+               
+            </div>
+        </div>
+      
+        <button class="slider-btn" onclick="prevSlide()">&#10094;</button>
+        <button class="slider-btn" onclick="nextSlide()">&#10095;</button>
+ 
+        <div class="why-visit">Why Visit NYC 🗽 ?</div>
+       
+    
+    <p class="NYC-text">
+        1. New York is the largest city in the US and hosts some of the most famous museums around the world. Anyone who visits New York can visit the Metropolitan Museum of Art, the largest US museum to see over two million works.
+
+    </p>
+    <p class="NYC-text">
+        2. New York has everything, chic boutiques to hipster flea markets to world-famous department stores. You can spend your day shopping on some of the most famous streets. In 5th Aveny you can find some of the most famous stores such as Armani, Bulgari, Tiffany & Co., Saks, Cartier, and Bergdorf Goodman.
+    </p>
+    
+      <p class="NYC-text">  3. n town you can see some of the most impressive buildings in the world. In between the skyscrapers of glass and metal are Art Deco and Gothic revivalist structures that seem like works of art.
+    </p>
+    <p class="NYC-text">
+        4. In New York, apart from stunning museums and attractions, you can also find amazing food. Millions of people from all over the world have decided to stay in New York and create their own restaurant. You can find quality Italian food, taste the special Chinese cuisine and other foreign flavors. When you visit New York do not forget to try Pizza, , Brunch , Burgers and Hotdogs.
+
+
+    </p>
+    
+    
+    
+</section>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slider img');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            const translateValue = -currentSlide * 100 + '%';
+            slider.style.transform = `translateX(${translateValue})`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+</body>
+</html>
