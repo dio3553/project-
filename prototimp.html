@@ -15,7 +15,7 @@ body, html {
     padding: 0;
 }
 
-
+/*------------------------Scroll Bar-----------------------*/
 ::-webkit-scrollbar {
     width: 20px;
 }
@@ -34,7 +34,7 @@ body, html {
     background-color: #FDE02F;
 }
 
-
+/*========================Nav Bar=========================*/
 .nav-bar {
     display: flex;
     flex-flow: row wrap;
@@ -82,7 +82,7 @@ ul.menu {
     text-decoration: underline;
 }
 
-
+/*=============================Banner=============================*/
 .banner {
     background-image: url("https://res.cloudinary.com/dxssqb6l8/image/upload/v1605294054/young-woman-enjoying-beautiful-scenery-of-lago-di-braies-italy-picjumbo-com_aa0fvw.jpg");
     background-size: cover;
@@ -171,7 +171,7 @@ ul.menu {
 }
 
 
-
+/*===========================Services===========================*/
 .services {
     display: flex;
     flex-flow: row;
@@ -210,7 +210,7 @@ ul.menu {
     flex: 1;
 }
 
-
+/*=============================Places===============================*/
 .places-text {
     text-align: center;
     margin-bottom: 50px;
@@ -286,7 +286,7 @@ ul.menu {
     font-size: 20px;
 }
 
-
+/*------------Zoom in Photos--------------*/
 .zoom-img {
     float: left;
     position: relative;
@@ -310,7 +310,7 @@ ul.menu {
     transform: scale(1.1);
 
 
-
+/*=========================About Us=========================*/
 .about {
     display: flex;
     flex-flow: row wrap;
@@ -401,7 +401,7 @@ ul.menu {
     color: #fff;
 }
 
-
+/*===============Footer===================*/
 .footer {
     background-image: url("https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293781/pine-tree_mq2sgp.jpg");
     background-size: cover;
@@ -482,15 +482,15 @@ ul.menu {
 }
 </style>
 
-  
+   <!--=========Services===============-->
    <body>
 
-    
+    <!--===========Nav Bar=================-->
     <section class="nav-bar">
         <div class="logo">Go Trip</div>
         <ul class="menu">
             <li><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
+            <li><a href="about.html">about</a></li>
             <li><a href="#">service</a></li>
             <li><a href="cuntect us.html">contact</a></li>
             <li><a href="logo12.html">Sign in</a></li>
@@ -498,7 +498,7 @@ ul.menu {
         </div>
         <link rel="stylesheet" href="thyUntitled-2.css">
     </section>
- 
+    <!--===============Banner================-->
     <section class="banner">
         <div class="banner-text-item">
             <div class="banner-heading">
@@ -507,11 +507,13 @@ ul.menu {
             <form class="form">
                 <input type="text" list="mylist" placeholder="Where would you like to go?">
                 <datalist id="mylist">
-                    <option>Texes</option>
-                    <option>NYC 🗽 </option>
-                    <option>California </option>
-                    <option>ALASKA</option>
-                   <option>US</option>
+                    <option>London</option>
+                    <option>Canada</option>
+                    <option>Monaco</option>
+                    <option>France</option>
+                    <option>Japan</option>
+                    <option>Switzerland</option>
+                    <option>Seoul</option>
                 </datalist>
                 <input type="date" class="date">
                 <a href="#" class="book">book</a>
@@ -549,14 +551,14 @@ ul.menu {
             <div class="card">
                 <div class="zoom-img">
                     <div class="img-card">
-                      <a href="alaska.html">  <img src="akaskkaaa.jpg"></a>
+                      <a href="alaska.html">  <img src="https://cdn.thecoolist.com/wp-content/uploads/2021/12/Best-Places-to-Visit-in-Alaska.jpg"></a>
                     </div>
                 </div>
     
                 <div class="text">
                     <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
                     <h2>The Dark Forest Adventure</h2>
-                    <p class="cost">$1870 / Per Person</p>
+                    <p class="cost">$1799 / Per Person</p>
                     <div class="card-box">
                         <p class="time">&#128339; 3 Days</p>
                         <p class="location">&#9992; Vancouver, alsakaa</p>
@@ -567,7 +569,7 @@ ul.menu {
             <div class="card">
                 <div class="zoom-img">
                     <div class="img-card">
-                        <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293755/paris_uj8wum.jpg">
+                       <a href="NYC.html"> <img src="https://media.cntraveler.com/photos/63483e15ef943eff59de603a/3:2/w_3000,h_2000,c_limit/New%20York%20City_GettyImages-1347979016.jpg"></a>
                     </div>
                 </div>
     
@@ -577,33 +579,16 @@ ul.menu {
                     <p class="cost">$1870 / Per Person</p>
                     <div class="card-box">
                         <p class="time">&#128339; 3 Days</p>
-                        <p class="location">&#9992; nyy</p>
+                        <p class="location">&#9992; NYC</p>
                     </div>
                 </div>
     
+           
             </div>
             <div class="card">
                 <div class="zoom-img">
                     <div class="img-card">
-                        <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293955/monaco_usu7xb.jpg">
-                    </div>
-                </div>
-    
-                <div class="text">
-                    <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
-                    <h2>The Dark Forest Adventure</h2>
-                    <p class="cost">$1870 / Per Person</p>
-                    <div class="card-box">
-                        <p class="time">&#128339; 3 Days</p>
-                        <p class="location">&#9992; Monaco, califorina </p>
-                    </div>
-                </div>
-    
-            </div>
-            <div class="card">
-                <div class="zoom-img">
-                    <div class="img-card">
-                        <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293874/switzerland_tubxcm.jpg">
+                       <a href="calIFORIN (1).html"> <img src="https://static.independent.co.uk/2023/06/23/15/iStock-468040530.jpg"></a>
                     </div>
                 </div>
     
@@ -621,14 +606,14 @@ ul.menu {
             <div class="card">
                 <div class="zoom-img">
                     <div class="img-card">
-                        <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293673/korea_bxrcj5.jpg">
+                     <a href="texas.html">   <img src="https://static.independent.co.uk/2023/06/23/16/iStock-1483998656.jpg"></a>
                     </div>
                 </div>
     
                 <div class="text">
                     <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
                     <h2>The Dark Forest Adventure</h2>
-                    <p class="cost">$1870 / Per Person</p>
+                    <p class="cost">$1459 / Per Person</p>
                     <div class="card-box">
                         <p class="time">&#128339; 3 Days</p>
                         <p class="location">&#9992; Seoul, texes </p>
