@@ -64,10 +64,74 @@
             </form>
         </div>
     </div>
+   
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    
+    <script>
+        function validateSignUp() {
+
+        var email = document.getElementById("email").value;
+
+        var password = document.getElementById("password").value;
+
+        var isValid = true;
+
+
+
+        var emailPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+        if (!emailPattern.test(email)) {
+            isValid = false;
+            document.getElementById("emailError").innerText = "Invalid email";
+        } else {
+            document.getElementById("emailError").innerText = "";
+        }
+
+
+        var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                isValid = false;
+                document.getElementById("passwordError").innerText = "Invalid password";
+            } else {
+                document.getElementById("passwordError").innerText = "";
+            }
+
+        if (isValid) {
+            alert("Sign up successful!\n\nDetails:\nName: " + firstName + " " + lastName + "\nEmail: " + email + "\nPhone Number: " + phoneNumber);
+        }
+    }
+    (function(doc){
+  var scriptElm = doc.scripts[doc.scripts.length - 1];
+  var warn = ['[ionicons] Deprecated script, please remove: ' + scriptElm.outerHTML];
+
+  warn.push('To improve performance it is recommended to set the differential scripts in the head as follows:')
+
+  var parts = scriptElm.src.split('/');
+  parts.pop();
+  parts.push('ionicons');
+  var url = parts.join('/');
+
+  var scriptElm = doc.createElement('script');
+  scriptElm.setAttribute('type', 'module');
+  scriptElm.src = url + '/ionicons.esm.js';
+  warn.push(scriptElm.outerHTML);
+  scriptElm.setAttribute('data-stencil-namespace', 'ionicons');
+  doc.head.appendChild(scriptElm);
+
+
+  scriptElm = doc.createElement('script');
+  scriptElm.setAttribute('nomodule', '');
+  scriptElm.src = url + '/ionicons.js';
+  warn.push(scriptElm.outerHTML);
+  scriptElm.setAttribute('data-stencil-namespace', 'ionicons');
+  doc.head.appendChild(scriptElm)
+
+  console.warn(warn.join('\n'));
+
+})(document);
+    </script>
+
 </body>
 </html>
+
 
 
 
