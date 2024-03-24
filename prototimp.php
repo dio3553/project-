@@ -82,6 +82,8 @@ ul.menu {
     text-decoration: underline;
 }
 
+
+/*=============================Banner=============================*/
 .banner {
     background-image: url("https://res.cloudinary.com/dxssqb6l8/image/upload/v1605294054/young-woman-enjoying-beautiful-scenery-of-lago-di-braies-italy-picjumbo-com_aa0fvw.jpg");
     background-size: cover;
@@ -107,6 +109,22 @@ ul.menu {
     right: 0;
     background-color: rgba(0, 0, 0, 0.2);
     /*background-size: 100%;*/
+}
+.boook{
+    position: relative;
+    top: 20%;
+    right: 0%;
+    width: 250px; 
+    height: 50px;
+   
+}
+
+.date {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 850px; 
+    height: 50px;  
 }
 
 .banner-text-item {
@@ -170,7 +188,7 @@ ul.menu {
 }
 
 
-
+/*===========================Services===========================*/
 .services {
     display: flex;
     flex-flow: row;
@@ -231,8 +249,8 @@ ul.menu {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-gap: 30px;
     align-items: center;
     justify-items: center;
@@ -250,9 +268,17 @@ ul.menu {
 
 .card img {
     max-width: 100%;
-    height: 300px;
+    height: 400px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.banner img {
+    max-width: 100%;
+    height: 750px;
+    border-radius: 8px;
+    cursor: pointer;
+
 }
 
 .cards .text {
@@ -464,11 +490,7 @@ ul.menu {
             cursor: pointer;
 
 }
- .footer {
-    padding: 20px;
-    color: ##00FFFF;
-    text-align: center;
-}
+
 @media screen and (max-width: 500px) {
     .navbar {
         flex-direction: column;
@@ -485,24 +507,26 @@ ul.menu {
 }
 </style>
 
-  
+   <!--=========Services===============-->
    <body>
 
-   
+    <!--===========Nav Bar=================-->
     <section class="nav-bar">
         <div class="logo">Go Trip</div>
         <ul class="menu">
-            <li><a href="#">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="#">service</a></li>
-            <li><a href="cuntect us.html">contact</a></li>
-            <li><a href="logo12.html">Sign in</a></li>
+            <li><a href="prototimp.php">home</a></li>
+            <li><a href="about.php">about</a></li>
+            <li><a href="service.php">service</a></li>
+            <li><a href="cuntect us.php">contact</a></li>
+            <li><a href="logo12.php">Sign in</a></li>
         </ul>
         </div>
         <link rel="stylesheet" href="thyUntitled-2.css">
     </section>
- 
+    <!--===============Banner================-->
+   
     <section class="banner">
+    <img src="https://w0.peakpx.com/wallpaper/832/896/HD-wallpaper-best-nature-nature.jpg" class="host" alt="">
         <div class="banner-text-item">
             <div class="banner-heading">
                 <h1>Find your Next tour!</h1>
@@ -510,39 +534,39 @@ ul.menu {
             <form class="form">
                 <input type="text" list="mylist" placeholder="Where would you like to go?">
                 <datalist id="mylist">
+                    <option>California</option>
+                    <option>Texas</option>
+                    <option>New York</option>
                     <option>Alaska</option>
-                    <option>Texas </option>
-                    <option>New York </option>
-                    <option>califoria </option>
-                    <option></option>
                     
+                    </option>
                 </datalist>
                 <input type="date" class="date">
-                <a href="#" class="book">book</a>
+                <a href="#" class="book"><button class="boook">book</a>
             </form>
         </div>
     </section>
     
-   
+    <!--=========Services===============-->
     <section class="services">
         <div class="service-item">
-            <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293634/tour-guide_onzla9.png">
+            <img src="https://lh3.googleusercontent.com/yU-BIF1YMv5MkS-0i5wH8j3CjrUH-MXpblDKS_HseI9CWTbcnMgFre9x8RWsO63lRF_b8LRNuPA72CRMz2din16q0bMojZiQQAio3F0?w72">
             <h2>8000+ Our Local Guides</h2>
         </div>
         <div class="service-item">
-            <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293738/reliability_jbpn4g.png">
+            <img src="https://thumbs.dreamstime.com/b/blank-gold-seal-isolated-white-background-47389760.jpg">
             <h2>100% Trusted Tour Agency</h2>
         </div>
         <div class="service-item">
-            <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293635/experience_a3fduk.png">
+            <img src="https://static.vecteezy.com/system/resources/previews/007/705/161/original/28-year-anniversary-celebration-with-gold-brush-symbol-happy-anniversary-greeting-celebrates-event-isolated-on-white-background-vector.jpg">
             <h2>28+ Years of Travel Experience</h2>
         </div>
         <div class="service-item">
-            <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293634/feedback_s8z7d9.png">
+            <img src="https://npr.brightspotcdn.com/dims4/default/e5a7d0a/2147483647/strip/true/crop/1280x960+0+0/resize/880x660!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkut%2Ffiles%2F201410%2FSmile.jpg">
             <h2>98% Our Travelers are Happy</h2>
         </div>
     </section>
-    
+    <!--==============Places===================-->
     <section class="places">
         <div class="places-text">
             <small>FEATURED TOURS PACKAGES</small>
@@ -553,7 +577,7 @@ ul.menu {
             <div class="card">
                 <div class="zoom-img">
                     <div class="img-card">
-                      <a href="alaska.html">  <img src="https://cdn.thecoolist.com/wp-content/uploads/2021/12/Best-Places-to-Visit-in-Alaska.jpg"></a>
+                      <a href="alaska.php">  <img src="https://cdn.thecoolist.com/wp-content/uploads/2021/12/Best-Places-to-Visit-in-Alaska.jpg"></a>
                     </div>
                 </div>
     
@@ -571,7 +595,7 @@ ul.menu {
             <div class="card">
                 <div class="zoom-img">
                     <div class="img-card">
-                       <a href="NYC.html"> <img src="https://media.cntraveler.com/photos/63483e15ef943eff59de603a/3:2/w_3000,h_2000,c_limit/New%20York%20City_GettyImages-1347979016.jpg"></a>
+                       <a href="NYC.php"> <img src="https://media.cntraveler.com/photos/63483e15ef943eff59de603a/3:2/w_3000,h_2000,c_limit/New%20York%20City_GettyImages-1347979016.jpg"></a>
                     </div>
                 </div>
     
@@ -590,7 +614,7 @@ ul.menu {
             <div class="card">
                 <div class="zoom-img">
                     <div class="img-card">
-                       <a href="calIFORIN (1).html"> <img src="https://static.independent.co.uk/2023/06/23/15/iStock-468040530.jpg"></a>
+                       <a href="calIFORIN (1).php"> <img src="https://static.independent.co.uk/2023/06/23/15/iStock-468040530.jpg"></a>
                     </div>
                 </div>
     
@@ -608,7 +632,7 @@ ul.menu {
             <div class="card">
                 <div class="zoom-img">
                     <div class="img-card">
-                     <a href="texas.html">   <img src="https://static.independent.co.uk/2023/06/23/16/iStock-1483998656.jpg"></a>
+                     <a href="texas.php">   <img src="https://static.independent.co.uk/2023/06/23/16/iStock-1483998656.jpg"></a>
                     </div>
                 </div>
     
@@ -621,26 +645,15 @@ ul.menu {
                         <p class="location">&#9992; Seoul, texes </p>
                     </div>
                 </div>
-  
-       </section>
-    <footer style="background-color:powderblue;"  class="section teal darken-3"   >
-        <p class="flow-text white-text center middle-align" style="font-family: Montserrat; text-align: center; font-size: 35px;"      >Go Trip &copy; 2018</p>
-        
-        <div class="icons"  style="background-color:powderblue;text-align: center;  ">
-                       
-                       
-     <a href=" https://www.facebook.com/"><ion-icon name="logo-facebook"> </ion-icon = >Facebooked </a>
-  <a href="https://www.instagram.com/"><ion-icon name="logo-instagram">insttagram </ion-icon></a>
-         <a href="https://twitter.com/"><ion-icon name="logo-twitter">X</ion-icon></a>
-  <a href="https://mail.google.com/mail/u/0/#inbox"><ion-icon name="logo-google">Gmail </ion-icon></a>
-                        
-                    </div>
     
-    
-
-</body>
-
-</html>
+     <div class="footer">
+  <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#">RR<ion-icon name="logo-instagram">ERYEYQE5Y5</ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter">GERTE5YE</ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google">THHHH4455</ion-icon></a>
+                        <a href="logo-skype"><ion-icon name="logo-skype"> TTTTRHT</ion-icon></a>
+</div>
+       
     
     
 
