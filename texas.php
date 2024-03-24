@@ -19,7 +19,7 @@ body, html {
     padding: 0;
 }
 
-
+/*------------------------Scroll Bar-----------------------*/
 ::-webkit-scrollbar {
     width: 20px;
 }
@@ -38,7 +38,7 @@ body, html {
     background-color: #FDE02F;
 }
 
-
+/*========================Nav Bar=========================*/
 .nav-bar {
     display: flex;
     flex-flow: row wrap;
@@ -137,20 +137,18 @@ ul.menu {
             outline: none;
             color: #3498db;
         }
-
-         footer {
-    padding: 20px;
-    color: ##00FFFF;
-    text-align: center;
-}
-
-        
         .slider img {
     width: 100%;
     height: 100%; 
     object-fit: cover; 
     border-radius: 8px;
 }
+footer {
+    padding: 20px;
+    color: ##00FFFF;
+    text-align: center;
+}
+
     </style>
 </head>
 <body>
@@ -158,10 +156,10 @@ ul.menu {
         <section class="nav-bar">
             <div class="logo">Go Trip</div>
             <ul class="menu">
-                <li><a href="prototimp.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="service.html">service</a></li>
-                <li><a href="cuntect us.html">contact</a></li>
+                <li><a href="prototimp.php">home</a></li>
+                <li><a href="about.php">about</a></li>
+                <li><a href="service.php">service</a></li>
+                <li><a href="cuntect us.php">contact</a></li>
             </ul>
             </div>
             <link rel="stylesheet" href="thyUntitled-2.css">
@@ -207,6 +205,19 @@ ul.menu {
         </p>
     </section>
 </section>
+<footer style="background-color:powderblue;" class="section teal darken-3">
+    <p class="flow-text white-text center middle-align" style="font-family: Montserrat; font-size: 35px;">Go Trip &copy; 2018</p>
+    
+    <div class="icons"  style="background-color:powderblue;">
+                   
+                   
+ <a href=" https://www.facebook.com/"><ion-icon name="logo-facebook"> </ion-icon = >Facebooked </a>
+<a href="https://www.instagram.com/"><ion-icon name="logo-instagram">insttagram </ion-icon></a>
+     <a href="https://twitter.com/"><ion-icon name="logo-twitter">X</ion-icon></a>
+<a href="https://mail.google.com/mail/u/0/#inbox"><ion-icon name="logo-google">Gmail </ion-icon></a>
+                    
+                </div>
+
 
     <script>
         let currentSlide = 0;
@@ -235,18 +246,4 @@ ul.menu {
         }
     </script>
 </body>
- <footer style="background-color:powderblue;" class="section teal darken-3">
-        <p class="flow-text white-text center middle-align" style="font-family: Montserrat; font-size: 35px;">Go Trip &copy; 2018</p>
-        
-        <div class="icons"  style="background-color:powderblue;">
-                       
-                       
-     <a href=" https://www.facebook.com/"><ion-icon name="logo-facebook"> </ion-icon = >Facebooked </a>
-  <a href="https://www.instagram.com/"><ion-icon name="logo-instagram">insttagram </ion-icon></a>
-         <a href="https://twitter.com/"><ion-icon name="logo-twitter">X</ion-icon></a>
-  <a href="https://mail.google.com/mail/u/0/#inbox"><ion-icon name="logo-google">Gmail </ion-icon></a>
-                        
-                    </div>
-    
-    
 </html>
