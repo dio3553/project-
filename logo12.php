@@ -10,10 +10,10 @@
         <section class="nav-bar">
             <div class="logo">Go Trip</div>
             <ul class="menu">
-                <li><a href="prototimp.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="service.html">service</a></li>
-                <li><a href="cuntect us.html">contact</a></li>
+                <li><a href="prototimp.php">home</a></li>
+                <li><a href="about.php">about</a></li>
+                <li><a href="service.php">service</a></li>
+                <li><a href="cuntect us.php">contact</a></li>
                 
             </ul>
             </div>
@@ -46,7 +46,7 @@
                     <button class="button" type="button" onclick="validateSignUp()">Sign in</button>
 
                     <p class="link">Don't have an account<br>
-                        <a href="singhtn in.html">Sign up here</a></p>
+                        <a href="singhtn in.php">Sign up here</a></p>
                         <p class="liw">Log in with</p>
     
                         <div class="icons">
@@ -64,18 +64,17 @@
             </form>
         </div>
     </div>
-   
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script>
         function validateSignUp() {
-
+       
         var email = document.getElementById("email").value;
-
+      
         var password = document.getElementById("password").value;
 
         var isValid = true;
 
-
+        
 
         var emailPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
         if (!emailPattern.test(email)) {
@@ -85,7 +84,7 @@
             document.getElementById("emailError").innerText = "";
         }
 
-
+        
         var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$/;
             if (!passwordPattern.test(password)) {
                 isValid = false;
@@ -116,22 +115,20 @@
   scriptElm.setAttribute('data-stencil-namespace', 'ionicons');
   doc.head.appendChild(scriptElm);
 
-
+  
   scriptElm = doc.createElement('script');
   scriptElm.setAttribute('nomodule', '');
   scriptElm.src = url + '/ionicons.js';
   warn.push(scriptElm.outerHTML);
   scriptElm.setAttribute('data-stencil-namespace', 'ionicons');
   doc.head.appendChild(scriptElm)
-
+  
   console.warn(warn.join('\n'));
 
 })(document);
     </script>
-
 </body>
 </html>
-
 
 
 
