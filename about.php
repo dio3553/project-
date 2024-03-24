@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,10 +128,10 @@ ul.menu {
     <div class="nav-bar">
         <div class="logo">Go Trip</div>
         <ul class="menu">
-            <li><a href="prototimp.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="service.html">service</a></li>
-            <li><a href="cuntect us.html">contact</a></li>
+            <li><a href="prototimp.php">home</a></li>
+            <li><a href="about.php">about</a></li>
+            <li><a href="service.php">service</a></li>
+            <li><a href="cuntect us.php">contact</a></li>
            
         </ul>
         </div>
