@@ -210,10 +210,10 @@ input {
         <section class="nav-bar">
             <div class="logo">Go Trip</div>
             <ul class="menu">
-                <li><a href="prototimp.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="service.html">service</a></li>
-                <li><a href="cuntect us.html">contact</a></li>
+                <li><a href="prototimp.php">home</a></li>
+                <li><a href="about.php">about</a></li>
+                <li><a href="service.php">service</a></li>
+                <li><a href="cuntect us.php">contact</a></li>
                 
             </ul>
             </div>
@@ -252,7 +252,7 @@ input {
                     <button class="button" type="button" onclick="validateSignUp()">Sign Up</button>
 
                         <p class="link">Do u have an exist account<br>
-                            <a href="logo12.html">Log in here</a></p> 
+                            <a href="logo12.php">Log in here</a></p> 
                     </form>
                 
 
